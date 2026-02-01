@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Bill for Bluesky | Donate to Come Back Alive 🇺🇦</title>
+  <meta name="title" content="Bill for Bluesky | Donate to Come Back Alive 🇺🇦">
+  <meta name="description" content="Calculate your Bluesky social media activity bill based on posts, reposts, and replies. Turn your engagement into a donation for Ukraine's defenders through Come Back Alive foundation.">
+  <meta name="keywords" content="Bluesky, bill calculator, donate Ukraine, Come Back Alive, Повернись Живим, social media, charity, support Ukraine, Bluesky activity">
+  <meta name="author" content="Bill for Bluesky">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English, Ukrainian">
+  
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#1185fe">
+  <meta name="msapplication-TileColor" content="#1185fe">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://Dovgonosyk.github.io/bill-for-bluesky">
+  <meta property="og:title" content="Bill for Bluesky | Donate to Come Back Alive 🇺🇦">
+  <meta property="og:description" content="Calculate your Bluesky activity bill and turn your social media engagement into support for Ukraine's defenders.">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="uk_UA">
+  <meta property="og:site_name" content="Bill for Bluesky">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://Dovgonosyk.github.io/bill-for-bluesky">
+  <meta property="twitter:title" content="Bill for Bluesky | Donate to Come Back Alive 🇺🇦">
+  <meta property="twitter:description" content="Calculate your Bluesky activity bill and turn your social media engagement into support for Ukraine's defenders.">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://Dovgonosyk.github.io/bill-for-bluesky">
+  
+  <!-- Alternate languages -->
+  <link rel="alternate" hreflang="en" href="https://Dovgonosyk.github.io/bill-for-bluesky?lang=en">
+  <link rel="alternate" hreflang="uk" href="https://Dovgonosyk.github.io/bill-for-bluesky?lang=uk">
+  <link rel="alternate" hreflang="x-default" href="https://Dovgonosyk.github.io/bill-for-bluesky">
+  
+  <!-- Preconnect to external resources -->
+  <link rel="preconnect" href="https://public.api.bsky.app">
+  <link rel="dns-prefetch" href="https://public.api.bsky.app">
+  <link rel="preconnect" href="https://cdn.bsky.app">
+  <link rel="dns-prefetch" href="https://cdn.bsky.app">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦋</text></svg>">
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦋</text></svg>">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Bill for Bluesky",
+    "description": "Calculate your Bluesky social media activity bill and donate to support Ukraine's defenders through Come Back Alive foundation.",
+    "url": "https://Dovgonosyk.github.io/bill-for-bluesky",
+    "applicationCategory": "SocialNetworkingApplication",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "UAH"
+    },
+    "author": {
+      "@type": "Organization",
+      "name": "Bill for Bluesky"
+    },
+    "potentialAction": {
+      "@type": "UseAction",
+      "target": "https://Dovgonosyk.github.io/bill-for-bluesky?handle={handle}",
+      "query-input": "required name=handle"
+    }
+  }
+  </script>
+  
+  <style>
+    :root {
+      --blue: #1185fe;
+      --blue-dark: #0969da;
+      --yellow: #ffd700;
+      --ua-blue: #0057b7;
+      --ua-yellow: #ffd700;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --success: #22c55e;
+      --error: #ef4444;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 1rem;
+    }
+
+    header {
+      text-align: center;
+      padding: 2rem 0;
+    }
+
+    .logo {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.25rem;
+    }
+
+    .subtitle {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    .input-section {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+    }
+
+    .input-group {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    input[type="text"] {
+      flex: 1;
+      padding: 0.875rem 1rem;
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.2s;
+    }
+
+    input[type="text"]:focus {
+      outline: none;
+      border-color: var(--blue);
+    }
+
+    .btn {
+      padding: 0.875rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-dark);
+    }
+
+    .btn-primary:disabled {
+      background: var(--text-muted);
+      cursor: not-allowed;
+    }
+
+    .period-selector {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .period-btn {
+      flex: 1;
+      min-width: 70px;
+      padding: 0.5rem;
+      background: var(--bg);
+      border: 2px solid var(--border);
+      border-radius: 6px;
+      font-size: 0.875rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .period-btn:hover {
+      border-color: var(--blue);
+    }
+
+    .period-btn.active {
+      background: var(--blue);
+      color: white;
+      border-color: var(--blue);
+    }
+
+    .loading {
+      text-align: center;
+      padding: 2rem;
+      display: none;
+    }
+
+    .loading.show {
+      display: block;
+    }
+
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid var(--border);
+      border-top-color: var(--blue);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1rem;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .error {
+      background: #fef2f2;
+      border: 1px solid var(--error);
+      color: var(--error);
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      display: none;
+    }
+
+    .error.show {
+      display: block;
+    }
+
+    .results {
+      display: none;
+    }
+
+    .results.show {
+      display: block;
+    }
+
+    .bill {
+      background: var(--card-bg);
+      border: 3px solid var(--blue);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+
+    .bill-header {
+      background: var(--blue);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .bill-header h2 {
+      font-size: 1.25rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .bill-period {
+      font-size: 0.875rem;
+      opacity: 0.9;
+    }
+
+    .bill-body {
+      padding: 1.5rem;
+      font-family: 'Courier New', monospace;
+    }
+
+    .employee-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px dashed var(--border);
+    }
+
+    .avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--blue);
+      flex-shrink: 0;
+    }
+
+    .avatar[src=""], .avatar:not([src]) {
+      display: none;
+    }
+
+    .employee-name {
+      font-weight: 700;
+    }
+
+    .employee-handle {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    .line-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.375rem 0;
+      font-size: 0.875rem;
+    }
+
+    .line-item-label {
+      color: var(--text-muted);
+    }
+
+    .line-item-count {
+      color: var(--text);
+    }
+
+    .line-item-amount {
+      font-weight: 600;
+      min-width: 80px;
+      text-align: right;
+    }
+
+    .divider {
+      border-top: 2px dashed var(--border);
+      margin: 0.75rem 0;
+    }
+
+    .total-line {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.125rem;
+      font-weight: 700;
+      padding-top: 0.5rem;
+    }
+
+    .total-amount {
+      color: var(--success);
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, var(--ua-blue) 0%, #1e40af 100%);
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-align: center;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .cta-section h3 {
+      font-size: 1.125rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-section p {
+      font-size: 0.875rem;
+      opacity: 0.9;
+      margin-bottom: 1rem;
+    }
+
+    .btn-donate {
+      background: var(--ua-yellow);
+      color: var(--ua-blue);
+      width: 100%;
+      font-size: 1.125rem;
+      padding: 1rem;
+    }
+
+    .btn-donate:hover {
+      background: #e6c200;
+    }
+
+    .btn-share {
+      background: var(--card-bg);
+      color: var(--blue);
+      border: 2px solid var(--blue);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .btn-share:hover {
+      background: var(--blue);
+      color: white;
+    }
+
+    .share-section {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+    }
+
+    footer a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    .rates-info {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 1rem;
+      padding: 0.75rem;
+      background: var(--bg);
+      border-radius: 6px 6px 0 0;
+    }
+
+    .empty-state {
+      text-align: center;
+      color: var(--text-muted);
+      padding: 1rem;
+      font-style: italic;
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.75rem;
+      background: var(--bg);
+      border-radius: 0 0 6px 6px;
+      border-top: 1px dashed var(--border);
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+
+    .checkbox-label:hover {
+      background: #e2e8f0;
+    }
+
+    .checkbox-label input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      accent-color: var(--blue);
+    }
+
+    .multiplier-badge {
+      background: var(--blue);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      margin-left: auto;
+    }
+
+    /* Language toggle */
+    .lang-toggle {
+      display: flex;
+      gap: 0.25rem;
+      justify-content: flex-end;
+      margin-bottom: 1rem;
+    }
+
+    .lang-btn {
+      padding: 0.25rem 0.5rem;
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 0.75rem;
+    }
+
+    .lang-btn.active {
+      background: var(--blue);
+      color: white;
+      border-color: var(--blue);
+    }
+
+    /* Skip link for accessibility */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 0;
+      background: var(--blue);
+      color: white;
+      padding: 0.5rem 1rem;
+      z-index: 1000;
+      text-decoration: none;
+      border-radius: 0 0 4px 0;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  <noscript>
+    <div style="padding: 2rem; text-align: center; background: #fef2f2; color: #ef4444;">
+      <p><strong>JavaScript is required</strong></p>
+      <p>This app needs JavaScript to calculate your Bluesky bill. Please enable JavaScript in your browser.</p>
+    </div>
+  </noscript>
+  <a href="#handle-input" class="skip-link">Skip to main content</a>
+  <div class="container">
+    <header>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="uk">UA</button>
+      </div>
+      <div class="logo">🦋</div>
+      <h1 data-i18n="title">Bill for Bluesky</h1>
+      <p class="subtitle" data-i18n="subtitle">Turn your social activity into support for Ukraine</p>
+    </header>
+
+    <main class="input-section" role="search">
+      <div class="input-group">
+        <input 
+          type="text" 
+          id="handle-input" 
+          placeholder="handle.bsky.social"
+          autocomplete="off"
+          autocapitalize="none"
+          aria-label="Bluesky handle"
+        >
+        <button class="btn btn-primary" id="calculate-btn" data-i18n="calculate">Calculate</button>
+      </div>
+
+      <nav class="period-selector" aria-label="Time period selection">
+        <button class="period-btn" data-period="day" data-i18n="today" aria-pressed="false">Today</button>
+        <button class="period-btn active" data-period="week" data-i18n="week" aria-pressed="true">Week</button>
+        <button class="period-btn" data-period="month" data-i18n="month" aria-pressed="false">Month</button>
+      </nav>
+
+      <div class="rates-info">
+        <strong data-i18n="ratesTitle">Rates:</strong> 
+        <span data-i18n="ratesDescription">Post: 5₴ | Repost: 3₴ | Reply: 2₴</span>
+      </div>
+
+      <label class="checkbox-label">
+        <input type="checkbox" id="it-checkbox" aria-describedby="multiplier-info">
+        <span data-i18n="itCheckbox">Are you in IT?</span>
+        <span class="multiplier-badge" id="multiplier-info" aria-label="10 times multiplier">×10</span>
+      </label>
+    </main>
+
+    <div class="error" id="error-message" role="alert" aria-live="polite"></div>
+
+    <div class="loading" id="loading" aria-live="polite">
+      <div class="spinner" aria-hidden="true"></div>
+      <p data-i18n="loading">Fetching your activity...</p>
+    </div>
+
+    <section class="results" id="results" aria-label="Bill results">
+      <article class="bill">
+        <div class="bill-header">
+          <h2 data-i18n="bill">🧾 YOUR BILL</h2>
+          <div class="bill-period" id="period-display"></div>
+        </div>
+        <div class="bill-body">
+          <div class="employee-info">
+            <img class="avatar" id="avatar" src="" alt="Profile avatar">
+            <div>
+              <div class="employee-name" id="display-name"></div>
+              <div class="employee-handle" id="handle-display"></div>
+            </div>
+          </div>
+
+          <div id="breakdown"></div>
+
+          <div class="divider"></div>
+
+          <div class="total-line">
+            <span data-i18n="total">TOTAL:</span>
+            <span class="total-amount" id="total-amount"></span>
+          </div>
+        </div>
+      </article>
+
+      <aside class="cta-section" aria-label="Donation call to action">
+        <h3>🇺🇦 <span data-i18n="ctaTitle">Support Ukraine's Defenders</span></h3>
+        <p data-i18n="ctaDescription">Consider donating your bill amount to Come Back Alive foundation</p>
+        <button class="btn btn-donate" id="donate-btn" aria-label="Donate to Come Back Alive foundation">
+          💙💛 <span data-i18n="donate">Donate to Come Back Alive</span>
+        </button>
+      </aside>
+
+      <div class="share-section">
+        <button class="btn btn-share" id="share-btn" aria-label="Share your bill on Bluesky">
+          <svg width="20" height="20" viewBox="0 0 600 530" fill="currentColor" aria-hidden="true">
+            <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-3.7077 7.8964-13.714 40.255-67.233 197.36-189.63 71.766-64.444-66.128-34.605-132.26 82.697-152.22-67.108 11.421-142.55-7.4491-163.25-81.433-5.9562-21.282-16.111-152.36-16.111-170.07 0-88.687 77.742-60.816 125.72-24.795z"/>
+          </svg>
+          <span data-i18n="share">Share on Bluesky</span>
+        </button>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        <span data-i18n="madeWith">Made with 💙💛 for Ukraine</span> | 
+        <a href="https://savelife.in.ua/en/" target="_blank" rel="noopener noreferrer">Come Back Alive</a>
+      </p>
+      <p style="margin-top: 0.5rem;">
+        <span data-i18n="apiNote">Using public Bluesky API • No authentication required</span>
+      </p>
+    </footer>
+  </div>
+
+  <script>
+    // ============================================
+    // Configuration
+    // ============================================
+    const CONFIG = {
+      API_BASE: 'https://public.api.bsky.app/xrpc',
+      DONATE_URL: 'https://savelife.in.ua/en/donate-en/',
+      RATES: {
+        post: 5,
+        repost: 3,
+        reply: 2
+      }
+    };
+
+    // ============================================
+    // Internationalization
+    // ============================================
+    const i18n = {
+      en: {
+        title: 'Bill for Bluesky',
+        subtitle: 'Turn your social activity into support for Ukraine',
+        calculate: 'Calculate',
+        today: 'Today',
+        week: 'Week',
+        month: 'Month',
+        ratesTitle: 'Rates:',
+        ratesDescription: 'Post: 5₴ | Repost: 3₴ | Reply: 2₴',
+        itCheckbox: 'Are you in IT?',
+        loading: 'Fetching your activity...',
+        bill: '🧾 YOUR BILL',
+        posts: 'Posts created',
+        reposts: 'Reposts made',
+        replies: 'Replies made',
+        total: 'TOTAL:',
+        ctaTitle: "Support Ukraine's Defenders",
+        ctaDescription: 'Consider donating your bill amount to Come Back Alive foundation',
+        donate: 'Donate to Come Back Alive',
+        share: 'Share on Bluesky',
+        madeWith: 'Made with 💙💛 for Ukraine',
+        apiNote: 'Using public Bluesky API • No authentication required',
+        errorNotFound: 'Profile not found. Please check the handle.',
+        errorApi: 'Failed to fetch data. Please try again.',
+        errorEmpty: 'Please enter a Bluesky handle.',
+        errorInvalidHandle: 'Invalid handle format. Use: handle.bsky.social',
+        emptyState: 'No activity found for this period. Try a longer time range!',
+        shareText: '🦋 My Bill for Bluesky: {amount}!\n\nCheck yours & donate to Come Back Alive 🇺🇦\n\n'
+      },
+      uk: {
+        title: 'Рахунок за Bluesky',
+        subtitle: 'Перетворіть вашу активність на підтримку України',
+        calculate: 'Розрахувати',
+        today: 'Сьогодні',
+        week: 'Тиждень',
+        month: 'Місяць',
+        ratesTitle: 'Тарифи:',
+        ratesDescription: 'Пост: 5₴ | Репост: 3₴ | Відповідь: 2₴',
+        itCheckbox: 'Ви айтішник?',
+        loading: 'Завантаження активності...',
+        bill: '🧾 ВАШ РАХУНОК',
+        posts: 'Постів створено',
+        reposts: 'Репостів зроблено',
+        replies: 'Відповідей',
+        total: 'ВСЬОГО:',
+        ctaTitle: 'Підтримайте захисників України',
+        ctaDescription: 'Задонатьте суму вашого рахунку на фонд Повернись Живим',
+        donate: 'Задонатити на Повернись Живим',
+        share: 'Поділитися в Bluesky',
+        madeWith: 'Зроблено з 💙💛 для України',
+        apiNote: 'Використовує публічний API Bluesky • Без авторизації',
+        errorNotFound: 'Профіль не знайдено. Перевірте handle.',
+        errorApi: 'Помилка завантаження. Спробуйте ще раз.',
+        errorEmpty: 'Будь ласка, введіть Bluesky handle.',
+        errorInvalidHandle: 'Невірний формат. Використовуйте: handle.bsky.social',
+        emptyState: 'Немає активності за цей період. Спробуйте більший проміжок часу!',
+        shareText: '🦋 Мій рахунок за Bluesky: {amount}!\n\nПеревір свій та задонать на Повернись Живим 🇺🇦\n\n'
+      }
+    };
+
+    let currentLang = 'en';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.dataset.i18n;
+        if (i18n[lang][key]) {
+          el.textContent = i18n[lang][key];
+        }
+      });
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+    }
+
+    function t(key) {
+      return i18n[currentLang][key] || i18n.en[key] || key;
+    }
+
+    // ============================================
+    // API Functions
+    // ============================================
+    const fetchOptions = {
+      cache: 'no-store',
+      headers: {
+        'Cache-Control': 'no-cache'
+      }
+    };
+
+    async function getProfile(handle) {
+      const url = `${CONFIG.API_BASE}/app.bsky.actor.getProfile?actor=${encodeURIComponent(handle)}`;
+      const res = await fetch(url, fetchOptions);
+      if (!res.ok) throw new Error('notFound');
+      return res.json();
+    }
+
+    async function getAuthorFeed(handle, limit = 100, cursor = null) {
+      let url = `${CONFIG.API_BASE}/app.bsky.feed.getAuthorFeed?actor=${encodeURIComponent(handle)}&limit=${limit}`;
+      if (cursor) url += `&cursor=${encodeURIComponent(cursor)}`;
+      const res = await fetch(url, fetchOptions);
+      if (!res.ok) throw new Error('apiFailed');
+      return res.json();
+    }
+
+    // Get the date when an item appeared in the user's feed
+    // For reposts: when the user reposted it
+    // For posts/replies: when the user created it
+    function getFeedItemDate(item) {
+      const isRepost = item.reason?.$type === 'app.bsky.feed.defs#reasonRepost';
+      if (isRepost) {
+        return new Date(item.reason.indexedAt);
+      }
+      return new Date(item.post.indexedAt || item.post.record.createdAt);
+    }
+
+    async function getAllPostsInRange(handle, startDate, endDate) {
+      const posts = [];
+      let cursor = null;
+      let iterations = 0;
+      const maxIterations = 10; // Safety limit
+
+      while (iterations < maxIterations) {
+        const data = await getAuthorFeed(handle, 100, cursor);
+        iterations++;
+
+        if (!data.feed || data.feed.length === 0) break;
+
+        for (const item of data.feed) {
+          const itemDate = getFeedItemDate(item);
+
+          // Feed is in reverse chronological order, so if we're past the start date, we're done
+          if (itemDate < startDate) {
+            return posts;
+          }
+
+          if (itemDate <= endDate) {
+            posts.push(item);
+          }
+        }
+
+        if (!data.cursor) break;
+        cursor = data.cursor;
+      }
+
+      return posts;
+    }
+
+    // ============================================
+    // Calculation Logic
+    // ============================================
+    function calculateBill(profile, feedItems, multiplier = 1) {
+      const breakdown = {
+        posts: { count: 0, amount: 0, label: 'posts' },
+        reposts: { count: 0, amount: 0, label: 'reposts' },
+        replies: { count: 0, amount: 0, label: 'replies' }
+      };
+
+      for (const item of feedItems) {
+        const post = item.post;
+        const isRepost = item.reason?.$type === 'app.bsky.feed.defs#reasonRepost';
+        const isReply = !!post.record?.reply;
+
+        if (isRepost) {
+          breakdown.reposts.count++;
+        } else if (isReply) {
+          breakdown.replies.count++;
+        } else {
+          breakdown.posts.count++;
+        }
+      }
+
+      // Calculate amounts with multiplier
+      breakdown.posts.amount = breakdown.posts.count * CONFIG.RATES.post * multiplier;
+      breakdown.reposts.amount = breakdown.reposts.count * CONFIG.RATES.repost * multiplier;
+      breakdown.replies.amount = breakdown.replies.count * CONFIG.RATES.reply * multiplier;
+
+      const total = Object.values(breakdown).reduce((sum, item) => sum + item.amount, 0);
+
+      return { breakdown, total };
+    }
+
+    function getDateRange(period) {
+      const now = new Date();
+      const endDate = now;
+      let startDate = null;
+
+      switch (period) {
+        case 'day':
+          startDate = new Date(now);
+          startDate.setHours(0, 0, 0, 0);
+          break;
+        case 'week':
+          startDate = new Date(now);
+          startDate.setDate(startDate.getDate() - 7);
+          break;
+        case 'month':
+          startDate = new Date(now);
+          startDate.setMonth(startDate.getMonth() - 1);
+          break;
+        default:
+          startDate = new Date(now);
+          startDate.setDate(startDate.getDate() - 7);
+      }
+
+      return { startDate, endDate };
+    }
+
+    function formatDate(date) {
+      const locale = currentLang === 'uk' ? 'uk-UA' : 'en-US';
+      return date.toLocaleDateString(locale, { 
+        month: 'short', 
+        day: 'numeric', 
+        year: 'numeric' 
+      });
+    }
+
+    function formatAmount(amount) {
+      const locale = currentLang === 'uk' ? 'uk-UA' : 'en-US';
+      return new Intl.NumberFormat(locale, {
+        style: 'currency',
+        currency: 'UAH',
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      }).format(amount);
+    }
+
+    function formatPeriodDisplay(period, startDate, endDate) {
+      if (period === 'day') {
+        return formatDate(endDate);
+      }
+      return `${formatDate(startDate)} - ${formatDate(endDate)}`;
+    }
+
+    // ============================================
+    // UI Functions
+    // ============================================
+    function normalizeHandle(input) {
+      let handle = input.trim().toLowerCase();
+      handle = handle.replace(/^@/, '');
+      if (!handle.includes('.')) {
+        handle += '.bsky.social';
+      }
+      return handle;
+    }
+
+    function showLoading() {
+      document.getElementById('loading').classList.add('show');
+      document.getElementById('results').classList.remove('show');
+      document.getElementById('error-message').classList.remove('show');
+    }
+
+    function hideLoading() {
+      document.getElementById('loading').classList.remove('show');
+    }
+
+    function showError(message) {
+      const errorEl = document.getElementById('error-message');
+      errorEl.textContent = message;
+      errorEl.classList.add('show');
+      hideLoading();
+    }
+
+    function showResults(profile, bill, period, dateRange) {
+      hideLoading();
+
+      // Set profile info with avatar fallback
+      const avatarEl = document.getElementById('avatar');
+      if (profile.avatar) {
+        avatarEl.src = profile.avatar;
+        avatarEl.style.display = 'block';
+      } else {
+        avatarEl.style.display = 'none';
+      }
+      
+      document.getElementById('display-name').textContent = profile.displayName || profile.handle;
+      document.getElementById('handle-display').textContent = '@' + profile.handle;
+      document.getElementById('period-display').textContent = formatPeriodDisplay(
+        period, 
+        dateRange.startDate, 
+        dateRange.endDate
+      );
+
+      // Build breakdown HTML
+      const breakdownEl = document.getElementById('breakdown');
+      breakdownEl.innerHTML = '';
+
+      const items = Object.values(bill.breakdown).filter(item => item.count > 0);
+      
+      // Check for empty state
+      if (items.length === 0) {
+        const emptyMsg = document.createElement('div');
+        emptyMsg.className = 'empty-state';
+        emptyMsg.textContent = t('emptyState');
+        breakdownEl.appendChild(emptyMsg);
+      } else {
+        for (const item of items) {
+          const lineItem = document.createElement('div');
+          lineItem.className = 'line-item';
+          lineItem.innerHTML = `
+            <span class="line-item-label">${t(item.label)} <span class="line-item-count">(${item.count.toLocaleString()})</span></span>
+            <span class="line-item-amount">${formatAmount(item.amount)}</span>
+          `;
+          breakdownEl.appendChild(lineItem);
+        }
+      }
+
+      // Set totals
+      document.getElementById('total-amount').textContent = formatAmount(bill.total);
+
+      // Hide donate CTA if bill is 0 (nothing to donate)
+      const ctaSection = document.querySelector('.cta-section');
+      ctaSection.style.display = bill.total > 0 ? 'block' : 'none';
+
+      // Show results
+      document.getElementById('results').classList.add('show');
+
+      // Store for share
+      window.currentBill = { profile, bill, period };
+    }
+
+    function validateHandle(input) {
+      if (!input || input.trim() === '') {
+        return { valid: false, error: 'errorEmpty' };
+      }
+      
+      const handle = normalizeHandle(input);
+      
+      // Basic validation: should have at least one dot and no spaces
+      if (!handle.includes('.') || handle.includes(' ')) {
+        return { valid: false, error: 'errorInvalidHandle' };
+      }
+      
+      // Should not have invalid characters (allow underscores for custom domains)
+      if (!/^[a-zA-Z0-9._-]+$/.test(handle)) {
+        return { valid: false, error: 'errorInvalidHandle' };
+      }
+      
+      return { valid: true, handle };
+    }
+
+    // ============================================
+    // Main Logic
+    // ============================================
+    async function calculate() {
+      const handleInput = document.getElementById('handle-input').value;
+      
+      const validation = validateHandle(handleInput);
+      if (!validation.valid) {
+        showError(t(validation.error));
+        return;
+      }
+      
+      const handle = validation.handle;
+      const period = document.querySelector('.period-btn.active').dataset.period;
+      const dateRange = getDateRange(period);
+
+      showLoading();
+
+      try {
+        const profile = await getProfile(handle);
+        const posts = await getAllPostsInRange(handle, dateRange.startDate, dateRange.endDate);
+        
+        // Check if IT checkbox is checked for 10x multiplier
+        const isIT = document.getElementById('it-checkbox').checked;
+        const multiplier = isIT ? 10 : 1;
+        
+        const bill = calculateBill(profile, posts, multiplier);
+        showResults(profile, bill, period, dateRange);
+      } catch (error) {
+        if (error.message === 'notFound') {
+          showError(t('errorNotFound'));
+        } else {
+          showError(t('errorApi'));
+          console.error(error);
+        }
+      }
+    }
+
+    function share() {
+      if (!window.currentBill) return;
+
+      const { profile, bill } = window.currentBill;
+      
+      // Create shareable URL with handle parameter
+      const shareableUrl = `${window.location.origin}${window.location.pathname}?handle=${encodeURIComponent(profile.handle)}`;
+      
+      const text = t('shareText')
+        .replace('{amount}', formatAmount(bill.total))
+        + shareableUrl;
+
+      const shareUrl = `https://bsky.app/intent/compose?text=${encodeURIComponent(text)}`;
+      window.open(shareUrl, '_blank', 'noopener,noreferrer');
+    }
+
+    function donate() {
+      window.open(CONFIG.DONATE_URL, '_blank', 'noopener,noreferrer');
+    }
+
+    // ============================================
+    // Event Listeners
+    // ============================================
+    document.addEventListener('DOMContentLoaded', () => {
+      // Language toggle
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+      });
+
+      // Period selector
+      document.querySelectorAll('.period-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.period-btn').forEach(b => {
+            b.classList.remove('active');
+            b.setAttribute('aria-pressed', 'false');
+          });
+          btn.classList.add('active');
+          btn.setAttribute('aria-pressed', 'true');
+          
+          // Recalculate if there's already a handle entered
+          const handleInput = document.getElementById('handle-input').value;
+          if (handleInput.trim()) {
+            calculate();
+          }
+        });
+      });
+
+      // Calculate button
+      document.getElementById('calculate-btn').addEventListener('click', calculate);
+
+      // Enter key in input
+      document.getElementById('handle-input').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') calculate();
+      });
+
+      // Share button
+      document.getElementById('share-btn').addEventListener('click', share);
+
+      // Donate button
+      document.getElementById('donate-btn').addEventListener('click', donate);
+
+      // IT checkbox - recalculate when toggled
+      document.getElementById('it-checkbox').addEventListener('change', () => {
+        const handleInput = document.getElementById('handle-input').value;
+        if (handleInput.trim()) {
+          calculate();
+        }
+      });
+
+      // Check for lang in URL parameter first
+      const urlParams = new URLSearchParams(window.location.search);
+      const langParam = urlParams.get('lang');
+      if (langParam && (langParam === 'en' || langParam === 'uk')) {
+        setLanguage(langParam);
+      } else {
+        // Auto-detect language from browser
+        const userLang = navigator.language.startsWith('uk') ? 'uk' : 'en';
+        setLanguage(userLang);
+      }
+
+      // Check for handle in URL parameter
+      const handleParam = urlParams.get('handle');
+      if (handleParam) {
+        document.getElementById('handle-input').value = handleParam;
+        calculate();
+      }
+    });
+  </script>
+</body>
+</html>
