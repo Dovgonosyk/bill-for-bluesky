@@ -11,7 +11,7 @@
   <meta name="keywords" content="Bluesky, bill calculator, donate Ukraine, Come Back Alive, Повернись Живим, social media, charity, support Ukraine, Bluesky activity">
   <meta name="author" content="Bill for Bluesky">
   <meta name="robots" content="index, follow">
-  <meta name="language" content="English, Ukrainian">
+  <meta name="language" content="English, Ukrainian, Japanese, German, French, Spanish, Portuguese, Polish">
   
   <!-- Theme Color -->
   <meta name="theme-color" content="#1185fe">
@@ -19,26 +19,34 @@
   
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://Dovgonosyk.github.io/bill-for-bluesky">
+  <meta property="og:url" content="https://dovgonosyk.github.io/bill-for-bluesky">
   <meta property="og:title" content="Bill for Bluesky | Donate to Come Back Alive 🇺🇦">
   <meta property="og:description" content="Calculate your Bluesky activity bill and turn your social media engagement into support for Ukraine's defenders.">
+  <meta property="og:image" content="https://dovgonosyk.github.io/bill-for-bluesky/og-image.png">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="uk_UA">
   <meta property="og:site_name" content="Bill for Bluesky">
   
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://Dovgonosyk.github.io/bill-for-bluesky">
+  <meta property="twitter:url" content="https://dovgonosyk.github.io/bill-for-bluesky/">
   <meta property="twitter:title" content="Bill for Bluesky | Donate to Come Back Alive 🇺🇦">
   <meta property="twitter:description" content="Calculate your Bluesky activity bill and turn your social media engagement into support for Ukraine's defenders.">
+  <meta property="twitter:image" content="https://dovgonosyk.github.io/bill-for-bluesky/og-image.png">
   
   <!-- Canonical URL -->
-  <link rel="canonical" href="https://Dovgonosyk.github.io/bill-for-bluesky">
+  <link rel="canonical" href="https://dovgonosyk.github.io/bill-for-bluesky/">
   
   <!-- Alternate languages -->
-  <link rel="alternate" hreflang="en" href="https://Dovgonosyk.github.io/bill-for-bluesky?lang=en">
-  <link rel="alternate" hreflang="uk" href="https://Dovgonosyk.github.io/bill-for-bluesky?lang=uk">
-  <link rel="alternate" hreflang="x-default" href="https://Dovgonosyk.github.io/bill-for-bluesky">
+  <link rel="alternate" hreflang="en" href="https://dovgonosyk.github.io/bill-for-bluesky/?lang=en">
+  <link rel="alternate" hreflang="uk" href="https://dovgonosyk.github.io/bill-for-bluesky/?lang=uk">
+  <link rel="alternate" hreflang="ja" href="https://dovgonosyk.github.io/bill-for-bluesky/?lang=ja">
+  <link rel="alternate" hreflang="de" href="https://dovgonosyk.github.io/bill-for-bluesky/?lang=de">
+  <link rel="alternate" hreflang="fr" href="https://dovgonosyk.github.io/bill-for-bluesky/?lang=fr">
+  <link rel="alternate" hreflang="es" href="https://dovgonosyk.github.io/bill-for-bluesky/?lang=es">
+  <link rel="alternate" hreflang="pt" href="https://dovgonosyk.github.io/bill-for-bluesky/?lang=pt">
+  <link rel="alternate" hreflang="pl" href="https://dovgonosyk.github.io/bill-for-bluesky/?lang=pl">
+  <link rel="alternate" hreflang="x-default" href="https://dovgonosyk.github.io/bill-for-bluesky/">
   
   <!-- Preconnect to external resources -->
   <link rel="preconnect" href="https://public.api.bsky.app">
@@ -47,8 +55,9 @@
   <link rel="dns-prefetch" href="https://cdn.bsky.app">
   
   <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦋</text></svg>">
-  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦋</text></svg>">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   
   <!-- Structured Data -->
   <script type="application/ld+json">
@@ -57,7 +66,7 @@
     "@type": "WebApplication",
     "name": "Bill for Bluesky",
     "description": "Calculate your Bluesky social media activity bill and donate to support Ukraine's defenders through Come Back Alive foundation.",
-    "url": "https://Dovgonosyk.github.io/bill-for-bluesky",
+    "url": "https://example.com/",
     "applicationCategory": "SocialNetworkingApplication",
     "operatingSystem": "Any",
     "offers": {
@@ -71,7 +80,7 @@
     },
     "potentialAction": {
       "@type": "UseAction",
-      "target": "https://Dovgonosyk.github.io/bill-for-bluesky?handle={handle}",
+      "target": "https://example.com/?handle={handle}",
       "query-input": "required name=handle"
     }
   }
@@ -105,12 +114,14 @@
       color: var(--text);
       min-height: 100vh;
       line-height: 1.5;
+      -webkit-text-size-adjust: 100%;
     }
 
     .container {
       max-width: 480px;
       margin: 0 auto;
       padding: 1rem;
+      position: relative;
     }
 
     header {
@@ -151,11 +162,14 @@
 
     input[type="text"] {
       flex: 1;
+      min-width: 0;
       padding: 0.875rem 1rem;
       border: 2px solid var(--border);
       border-radius: 8px;
       font-size: 1rem;
       transition: border-color 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
     }
 
     input[type="text"]:focus {
@@ -171,15 +185,25 @@
       font-weight: 600;
       cursor: pointer;
       transition: all 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
     }
 
     .btn-primary {
       background: var(--blue);
       color: white;
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     .btn-primary:hover {
       background: var(--blue-dark);
+    }
+
+    .btn-primary:active {
+      transform: scale(0.97);
     }
 
     .btn-primary:disabled {
@@ -190,23 +214,32 @@
     .period-selector {
       display: flex;
       gap: 0.5rem;
-      flex-wrap: wrap;
     }
 
     .period-btn {
       flex: 1;
-      min-width: 70px;
-      padding: 0.5rem;
+      min-width: 0;
+      padding: 0.625rem 0.25rem;
       background: var(--bg);
       border: 2px solid var(--border);
       border-radius: 6px;
       font-size: 0.875rem;
       cursor: pointer;
       transition: all 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+      text-align: center;
+      white-space: nowrap;
     }
 
     .period-btn:hover {
       border-color: var(--blue);
+    }
+
+    .period-btn:active {
+      transform: scale(0.97);
     }
 
     .period-btn.active {
@@ -314,11 +347,15 @@
 
     .employee-name {
       font-weight: 700;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .employee-handle {
       color: var(--text-muted);
       font-size: 0.875rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .line-item {
@@ -340,6 +377,7 @@
       font-weight: 600;
       min-width: 80px;
       text-align: right;
+      flex-shrink: 0;
     }
 
     .divider {
@@ -391,6 +429,10 @@
       background: #e6c200;
     }
 
+    .btn-donate:active {
+      transform: scale(0.98);
+    }
+
     .btn-share {
       background: var(--card-bg);
       color: var(--blue);
@@ -405,6 +447,10 @@
     .btn-share:hover {
       background: var(--blue);
       color: white;
+    }
+
+    .btn-share:active {
+      transform: scale(0.98);
     }
 
     .share-section {
@@ -464,6 +510,7 @@
       height: 18px;
       cursor: pointer;
       accent-color: var(--blue);
+      flex-shrink: 0;
     }
 
     .multiplier-badge {
@@ -474,23 +521,31 @@
       padding: 0.2rem 0.4rem;
       border-radius: 4px;
       margin-left: auto;
+      flex-shrink: 0;
     }
 
     /* Language toggle */
     .lang-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
       display: flex;
-      gap: 0.25rem;
+      flex-wrap: wrap;
       justify-content: flex-end;
-      margin-bottom: 1rem;
+      gap: 0.2rem;
+      max-width: 220px;
     }
 
     .lang-btn {
-      padding: 0.25rem 0.5rem;
+      padding: 0.3rem 0.4rem;
       background: transparent;
       border: 1px solid var(--border);
       border-radius: 4px;
       cursor: pointer;
-      font-size: 0.75rem;
+      font-size: 0.65rem;
+      font-weight: 600;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
     }
 
     .lang-btn.active {
@@ -515,6 +570,88 @@
     .skip-link:focus {
       top: 0;
     }
+
+    /* ==========================================
+       Mobile-specific fixes
+       ========================================== */
+    @media (max-width: 400px) {
+      .container {
+        padding: 0.75rem;
+      }
+
+      header {
+        padding: 1.5rem 0 1rem;
+      }
+
+      .logo {
+        font-size: 2.5rem;
+      }
+
+      h1 {
+        font-size: 1.25rem;
+      }
+
+      .input-section {
+        padding: 1rem;
+      }
+
+      .input-group {
+        flex-direction: column;
+      }
+
+      .btn-primary {
+        width: 100%;
+        text-align: center;
+      }
+
+      .period-btn {
+        font-size: 0.8rem;
+        padding: 0.5rem 0.125rem;
+      }
+
+      .bill-body {
+        padding: 1rem;
+      }
+
+      .cta-section {
+        padding: 1.25rem;
+      }
+
+      .btn-donate {
+        font-size: 1rem;
+        padding: 0.875rem;
+      }
+
+      .share-section {
+        padding: 1rem;
+      }
+    }
+
+    @media (max-width: 320px) {
+      .period-selector {
+        flex-wrap: wrap;
+      }
+
+      .period-btn {
+        flex: 1 1 calc(33% - 0.35rem);
+      }
+    }
+
+    /* Fix iOS button rendering */
+    @supports (-webkit-touch-callout: none) {
+      .btn,
+      .period-btn,
+      .lang-btn,
+      .btn-donate,
+      .btn-share {
+        -webkit-appearance: none;
+        appearance: none;
+      }
+
+      input[type="text"] {
+        font-size: 16px; /* prevents iOS zoom on focus */
+      }
+    }
   </style>
 </head>
 <body>
@@ -526,11 +663,18 @@
   </noscript>
   <a href="#handle-input" class="skip-link">Skip to main content</a>
   <div class="container">
+    <div class="lang-toggle">
+      <button class="lang-btn" data-lang="en">EN</button>
+      <button class="lang-btn" data-lang="uk">UA</button>
+      <button class="lang-btn" data-lang="pl">PL</button>
+      <button class="lang-btn" data-lang="de">DE</button>
+      <button class="lang-btn" data-lang="fr">FR</button>
+      <button class="lang-btn" data-lang="es">ES</button>
+      <button class="lang-btn" data-lang="pt">PT</button>
+      <button class="lang-btn" data-lang="ja">JA</button>
+    </div>
+
     <header>
-      <div class="lang-toggle">
-        <button class="lang-btn active" data-lang="en">EN</button>
-        <button class="lang-btn" data-lang="uk">UA</button>
-      </div>
       <div class="logo">🦋</div>
       <h1 data-i18n="title">Bill for Bluesky</h1>
       <p class="subtitle" data-i18n="subtitle">Turn your social activity into support for Ukraine</p>
@@ -583,7 +727,7 @@
         <div class="bill-body">
           <div class="employee-info">
             <img class="avatar" id="avatar" src="" alt="Profile avatar">
-            <div>
+            <div style="min-width: 0;">
               <div class="employee-name" id="display-name"></div>
               <div class="employee-handle" id="handle-display"></div>
             </div>
@@ -640,7 +784,8 @@
         post: 5,
         repost: 3,
         reply: 2
-      }
+      },
+      VALID_PERIODS: ['day', 'week', 'month']
     };
 
     // ============================================
@@ -674,7 +819,7 @@
         errorEmpty: 'Please enter a Bluesky handle.',
         errorInvalidHandle: 'Invalid handle format. Use: handle.bsky.social',
         emptyState: 'No activity found for this period. Try a longer time range!',
-        shareText: '🦋 My Bill for Bluesky: {amount}!\n\nCheck yours & donate to Come Back Alive 🇺🇦\n\n'
+        shareText: '🦋 My Bill for Bluesky: {amount} UAH!\n\nCheck yours & donate to Come Back Alive 🇺🇦\n\n'
       },
       uk: {
         title: 'Рахунок за Bluesky',
@@ -703,11 +848,201 @@
         errorEmpty: 'Будь ласка, введіть Bluesky handle.',
         errorInvalidHandle: 'Невірний формат. Використовуйте: handle.bsky.social',
         emptyState: 'Немає активності за цей період. Спробуйте більший проміжок часу!',
-        shareText: '🦋 Мій рахунок за Bluesky: {amount}!\n\nПеревір свій та задонать на Повернись Живим 🇺🇦\n\n'
+        shareText: '🦋 Мій рахунок за Bluesky: {amount} грн!\n\nПеревір свій та задонать на Повернись Живим 🇺🇦\n\n'
+      },
+
+      ja: {
+        title: 'Blueskyの請求書',
+        subtitle: 'あなたのSNS活動をウクライナ支援に',
+        calculate: '計算する',
+        today: '今日',
+        week: '週間',
+        month: '月間',
+        ratesTitle: '料金:',
+        ratesDescription: '投稿: 5₴ | リポスト: 3₴ | 返信: 2₴',
+        itCheckbox: 'IT業界ですか？',
+        loading: 'アクティビティを取得中...',
+        bill: '🧾 あなたの請求書',
+        posts: '投稿数',
+        reposts: 'リポスト数',
+        replies: '返信数',
+        total: '合計:',
+        ctaTitle: 'ウクライナの防衛者を支援',
+        ctaDescription: '請求額をCome Back Alive基金に寄付しませんか',
+        donate: 'Come Back Aliveに寄付',
+        share: 'Blueskyでシェア',
+        madeWith: '💙💛 ウクライナのために',
+        apiNote: 'Bluesky公開APIを使用 • 認証不要',
+        errorNotFound: 'プロフィールが見つかりません。ハンドルを確認してください。',
+        errorApi: 'データの取得に失敗しました。もう一度お試しください。',
+        errorEmpty: 'Blueskyハンドルを入力してください。',
+        errorInvalidHandle: '無効な形式です。例: handle.bsky.social',
+        emptyState: 'この期間のアクティビティがありません。もっと長い期間を試してください！',
+        shareText: '🦋 私のBluesky請求書: {amount} UAH!\n\nあなたもチェックしてCome Back Aliveに寄付しよう 🇺🇦\n\n'
+      },
+      de: {
+        title: 'Rechnung für Bluesky',
+        subtitle: 'Verwandle deine Aktivität in Unterstützung für die Ukraine',
+        calculate: 'Berechnen',
+        today: 'Heute',
+        week: 'Woche',
+        month: 'Monat',
+        ratesTitle: 'Tarife:',
+        ratesDescription: 'Post: 5₴ | Repost: 3₴ | Antwort: 2₴',
+        itCheckbox: 'Bist du in der IT?',
+        loading: 'Aktivität wird geladen...',
+        bill: '🧾 DEINE RECHNUNG',
+        posts: 'Beiträge erstellt',
+        reposts: 'Reposts gemacht',
+        replies: 'Antworten geschrieben',
+        total: 'GESAMT:',
+        ctaTitle: 'Unterstütze die Verteidiger der Ukraine',
+        ctaDescription: 'Spende den Rechnungsbetrag an die Come Back Alive Stiftung',
+        donate: 'An Come Back Alive spenden',
+        share: 'Auf Bluesky teilen',
+        madeWith: 'Mit 💙💛 für die Ukraine',
+        apiNote: 'Nutzt die öffentliche Bluesky API • Keine Anmeldung nötig',
+        errorNotFound: 'Profil nicht gefunden. Bitte überprüfe den Handle.',
+        errorApi: 'Daten konnten nicht geladen werden. Bitte versuche es erneut.',
+        errorEmpty: 'Bitte gib einen Bluesky Handle ein.',
+        errorInvalidHandle: 'Ungültiges Format. Nutze: handle.bsky.social',
+        emptyState: 'Keine Aktivität in diesem Zeitraum. Versuche einen längeren Zeitraum!',
+        shareText: '🦋 Meine Rechnung für Bluesky: {amount} UAH!\n\nPrüfe deine & spende an Come Back Alive 🇺🇦\n\n'
+      },
+      fr: {
+        title: 'Facture Bluesky',
+        subtitle: 'Transformez votre activité en soutien pour l\'Ukraine',
+        calculate: 'Calculer',
+        today: 'Aujourd\'hui',
+        week: 'Semaine',
+        month: 'Mois',
+        ratesTitle: 'Tarifs :',
+        ratesDescription: 'Post : 5₴ | Repost : 3₴ | Réponse : 2₴',
+        itCheckbox: 'Vous êtes dans l\'IT ?',
+        loading: 'Chargement de votre activité...',
+        bill: '🧾 VOTRE FACTURE',
+        posts: 'Posts créés',
+        reposts: 'Reposts effectués',
+        replies: 'Réponses écrites',
+        total: 'TOTAL :',
+        ctaTitle: 'Soutenez les défenseurs de l\'Ukraine',
+        ctaDescription: 'Faites un don du montant de votre facture à la fondation Come Back Alive',
+        donate: 'Donner à Come Back Alive',
+        share: 'Partager sur Bluesky',
+        madeWith: 'Fait avec 💙💛 pour l\'Ukraine',
+        apiNote: 'Utilise l\'API publique Bluesky • Sans authentification',
+        errorNotFound: 'Profil introuvable. Vérifiez le handle.',
+        errorApi: 'Échec du chargement. Veuillez réessayer.',
+        errorEmpty: 'Veuillez entrer un handle Bluesky.',
+        errorInvalidHandle: 'Format invalide. Utilisez : handle.bsky.social',
+        emptyState: 'Aucune activité pour cette période. Essayez une période plus longue !',
+        shareText: '🦋 Ma facture Bluesky : {amount} UAH !\n\nVérifiez la vôtre & donnez à Come Back Alive 🇺🇦\n\n'
+      },
+      es: {
+        title: 'Factura de Bluesky',
+        subtitle: 'Convierte tu actividad en apoyo para Ucrania',
+        calculate: 'Calcular',
+        today: 'Hoy',
+        week: 'Semana',
+        month: 'Mes',
+        ratesTitle: 'Tarifas:',
+        ratesDescription: 'Post: 5₴ | Repost: 3₴ | Respuesta: 2₴',
+        itCheckbox: '¿Trabajas en IT?',
+        loading: 'Cargando tu actividad...',
+        bill: '🧾 TU FACTURA',
+        posts: 'Posts creados',
+        reposts: 'Reposts hechos',
+        replies: 'Respuestas escritas',
+        total: 'TOTAL:',
+        ctaTitle: 'Apoya a los defensores de Ucrania',
+        ctaDescription: 'Dona el importe de tu factura a la fundación Come Back Alive',
+        donate: 'Donar a Come Back Alive',
+        share: 'Compartir en Bluesky',
+        madeWith: 'Hecho con 💙💛 para Ucrania',
+        apiNote: 'Usa la API pública de Bluesky • Sin autenticación',
+        errorNotFound: 'Perfil no encontrado. Verifica el handle.',
+        errorApi: 'Error al cargar datos. Inténtalo de nuevo.',
+        errorEmpty: 'Por favor, introduce un handle de Bluesky.',
+        errorInvalidHandle: 'Formato inválido. Usa: handle.bsky.social',
+        emptyState: '¡Sin actividad en este período. Prueba un rango más largo!',
+        shareText: '🦋 Mi factura de Bluesky: {amount} UAH!\n\n¡Revisa la tuya y dona a Come Back Alive! 🇺🇦\n\n'
+      },
+      pt: {
+        title: 'Conta do Bluesky',
+        subtitle: 'Transforme sua atividade em apoio à Ucrânia',
+        calculate: 'Calcular',
+        today: 'Hoje',
+        week: 'Semana',
+        month: 'Mês',
+        ratesTitle: 'Tarifas:',
+        ratesDescription: 'Post: 5₴ | Repost: 3₴ | Resposta: 2₴',
+        itCheckbox: 'Você é de TI?',
+        loading: 'Carregando sua atividade...',
+        bill: '🧾 SUA CONTA',
+        posts: 'Posts criados',
+        reposts: 'Reposts feitos',
+        replies: 'Respostas escritas',
+        total: 'TOTAL:',
+        ctaTitle: 'Apoie os defensores da Ucrânia',
+        ctaDescription: 'Doe o valor da sua conta para a fundação Come Back Alive',
+        donate: 'Doar para Come Back Alive',
+        share: 'Compartilhar no Bluesky',
+        madeWith: 'Feito com 💙💛 para a Ucrânia',
+        apiNote: 'Usa a API pública do Bluesky • Sem autenticação',
+        errorNotFound: 'Perfil não encontrado. Verifique o handle.',
+        errorApi: 'Falha ao carregar dados. Tente novamente.',
+        errorEmpty: 'Por favor, insira um handle do Bluesky.',
+        errorInvalidHandle: 'Formato inválido. Use: handle.bsky.social',
+        emptyState: 'Nenhuma atividade neste período. Tente um intervalo maior!',
+        shareText: '🦋 Minha conta do Bluesky: {amount} UAH!\n\nConfira a sua e doe para Come Back Alive! 🇺🇦\n\n'
+      },
+      pl: {
+        title: 'Rachunek za Bluesky',
+        subtitle: 'Zamień swoją aktywność we wsparcie dla Ukrainy',
+        calculate: 'Oblicz',
+        today: 'Dziś',
+        week: 'Tydzień',
+        month: 'Miesiąc',
+        ratesTitle: 'Stawki:',
+        ratesDescription: 'Post: 5₴ | Repost: 3₴ | Odpowiedź: 2₴',
+        itCheckbox: 'Pracujesz w IT?',
+        loading: 'Pobieranie aktywności...',
+        bill: '🧾 TWÓJ RACHUNEK',
+        posts: 'Posty utworzone',
+        reposts: 'Reposty wykonane',
+        replies: 'Odpowiedzi napisane',
+        total: 'SUMA:',
+        ctaTitle: 'Wesprzyj obrońców Ukrainy',
+        ctaDescription: 'Przekaż kwotę rachunku na fundację Come Back Alive',
+        donate: 'Wpłać na Come Back Alive',
+        share: 'Udostępnij na Bluesky',
+        madeWith: 'Zrobione z 💙💛 dla Ukrainy',
+        apiNote: 'Używa publicznego API Bluesky • Bez logowania',
+        errorNotFound: 'Profil nie znaleziony. Sprawdź handle.',
+        errorApi: 'Błąd ładowania danych. Spróbuj ponownie.',
+        errorEmpty: 'Proszę podać handle Bluesky.',
+        errorInvalidHandle: 'Nieprawidłowy format. Użyj: handle.bsky.social',
+        emptyState: 'Brak aktywności w tym okresie. Spróbuj dłuższego zakresu!',
+        shareText: '🦋 Mój rachunek za Bluesky: {amount} UAH!\n\nSprawdź swój i wpłać na Come Back Alive! 🇺🇦\n\n'
       }
     };
 
     let currentLang = 'en';
+
+    function detectUserLanguage() {
+      const languages = navigator.languages || [navigator.language || navigator.userLanguage || 'en'];
+      for (const lang of languages) {
+        const code = lang.toLowerCase();
+        if (code.startsWith('uk') || code.startsWith('ua')) return 'uk';
+        if (code.startsWith('ja')) return 'ja';
+        if (code.startsWith('de')) return 'de';
+        if (code.startsWith('fr')) return 'fr';
+        if (code.startsWith('es')) return 'es';
+        if (code.startsWith('pt')) return 'pt';
+        if (code.startsWith('pl')) return 'pl';
+      }
+      return 'en';
+    }
 
     function setLanguage(lang) {
       currentLang = lang;
@@ -725,6 +1060,25 @@
 
     function t(key) {
       return i18n[currentLang][key] || i18n.en[key] || key;
+    }
+
+    // ============================================
+    // URL Parameter Helpers
+    // ============================================
+    function getUrlParams() {
+      return new URLSearchParams(window.location.search);
+    }
+
+    function updateUrlParams(params) {
+      const url = new URL(window.location);
+      for (const [key, value] of Object.entries(params)) {
+        if (value !== null && value !== undefined) {
+          url.searchParams.set(key, value);
+        } else {
+          url.searchParams.delete(key);
+        }
+      }
+      window.history.replaceState({}, '', url);
     }
 
     // ============================================
@@ -752,9 +1106,6 @@
       return res.json();
     }
 
-    // Get the date when an item appeared in the user's feed
-    // For reposts: when the user reposted it
-    // For posts/replies: when the user created it
     function getFeedItemDate(item) {
       const isRepost = item.reason?.$type === 'app.bsky.feed.defs#reasonRepost';
       if (isRepost) {
@@ -767,7 +1118,7 @@
       const posts = [];
       let cursor = null;
       let iterations = 0;
-      const maxIterations = 10; // Safety limit
+      const maxIterations = 10;
 
       while (iterations < maxIterations) {
         const data = await getAuthorFeed(handle, 100, cursor);
@@ -778,7 +1129,6 @@
         for (const item of data.feed) {
           const itemDate = getFeedItemDate(item);
 
-          // Feed is in reverse chronological order, so if we're past the start date, we're done
           if (itemDate < startDate) {
             return posts;
           }
@@ -819,7 +1169,6 @@
         }
       }
 
-      // Calculate amounts with multiplier
       breakdown.posts.amount = breakdown.posts.count * CONFIG.RATES.post * multiplier;
       breakdown.reposts.amount = breakdown.reposts.count * CONFIG.RATES.repost * multiplier;
       breakdown.replies.amount = breakdown.replies.count * CONFIG.RATES.reply * multiplier;
@@ -856,7 +1205,8 @@
     }
 
     function formatDate(date) {
-      const locale = currentLang === 'uk' ? 'uk-UA' : 'en-US';
+      const localeMap = { en: 'en-US', uk: 'uk-UA', ja: 'ja-JP', de: 'de-DE', fr: 'fr-FR', es: 'es-ES', pt: 'pt-BR', pl: 'pl-PL' };
+      const locale = localeMap[currentLang] || 'en-US';
       return date.toLocaleDateString(locale, { 
         month: 'short', 
         day: 'numeric', 
@@ -864,21 +1214,11 @@
       });
     }
 
-    function formatAmount(amount) {
-      const locale = currentLang === 'uk' ? 'uk-UA' : 'en-US';
-      return new Intl.NumberFormat(locale, {
-        style: 'currency',
-        currency: 'UAH',
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-      }).format(amount);
-    }
-
     function formatPeriodDisplay(period, startDate, endDate) {
       if (period === 'day') {
         return formatDate(endDate);
       }
-      return `${formatDate(startDate)} - ${formatDate(endDate)}`;
+      return `${formatDate(startDate)} – ${formatDate(endDate)}`;
     }
 
     // ============================================
@@ -891,6 +1231,18 @@
         handle += '.bsky.social';
       }
       return handle;
+    }
+
+    function setActivePeriod(period) {
+      document.querySelectorAll('.period-btn').forEach(b => {
+        const isActive = b.dataset.period === period;
+        b.classList.toggle('active', isActive);
+        b.setAttribute('aria-pressed', String(isActive));
+      });
+    }
+
+    function getActivePeriod() {
+      return document.querySelector('.period-btn.active').dataset.period;
     }
 
     function showLoading() {
@@ -913,7 +1265,6 @@
     function showResults(profile, bill, period, dateRange) {
       hideLoading();
 
-      // Set profile info with avatar fallback
       const avatarEl = document.getElementById('avatar');
       if (profile.avatar) {
         avatarEl.src = profile.avatar;
@@ -930,13 +1281,11 @@
         dateRange.endDate
       );
 
-      // Build breakdown HTML
       const breakdownEl = document.getElementById('breakdown');
       breakdownEl.innerHTML = '';
 
       const items = Object.values(bill.breakdown).filter(item => item.count > 0);
       
-      // Check for empty state
       if (items.length === 0) {
         const emptyMsg = document.createElement('div');
         emptyMsg.className = 'empty-state';
@@ -948,23 +1297,19 @@
           lineItem.className = 'line-item';
           lineItem.innerHTML = `
             <span class="line-item-label">${t(item.label)} <span class="line-item-count">(${item.count.toLocaleString()})</span></span>
-            <span class="line-item-amount">${formatAmount(item.amount)}</span>
+            <span class="line-item-amount">${item.amount.toFixed(2)} ₴</span>
           `;
           breakdownEl.appendChild(lineItem);
         }
       }
 
-      // Set totals
-      document.getElementById('total-amount').textContent = formatAmount(bill.total);
+      document.getElementById('total-amount').textContent = `${bill.total.toFixed(2)} ₴`;
 
-      // Hide donate CTA if bill is 0 (nothing to donate)
       const ctaSection = document.querySelector('.cta-section');
       ctaSection.style.display = bill.total > 0 ? 'block' : 'none';
 
-      // Show results
       document.getElementById('results').classList.add('show');
 
-      // Store for share
       window.currentBill = { profile, bill, period };
     }
 
@@ -975,13 +1320,11 @@
       
       const handle = normalizeHandle(input);
       
-      // Basic validation: should have at least one dot and no spaces
       if (!handle.includes('.') || handle.includes(' ')) {
         return { valid: false, error: 'errorInvalidHandle' };
       }
       
-      // Should not have invalid characters (allow underscores for custom domains)
-      if (!/^[a-zA-Z0-9._-]+$/.test(handle)) {
+      if (!/^[a-zA-Z0-9.-]+$/.test(handle)) {
         return { valid: false, error: 'errorInvalidHandle' };
       }
       
@@ -993,6 +1336,7 @@
     // ============================================
     async function calculate() {
       const handleInput = document.getElementById('handle-input').value;
+      const calcBtn = document.getElementById('calculate-btn');
       
       const validation = validateHandle(handleInput);
       if (!validation.valid) {
@@ -1001,16 +1345,19 @@
       }
       
       const handle = validation.handle;
-      const period = document.querySelector('.period-btn.active').dataset.period;
+      const period = getActivePeriod();
       const dateRange = getDateRange(period);
 
+      // Sync URL params
+      updateUrlParams({ handle: handle, period: period });
+
+      calcBtn.disabled = true;
       showLoading();
 
       try {
         const profile = await getProfile(handle);
         const posts = await getAllPostsInRange(handle, dateRange.startDate, dateRange.endDate);
         
-        // Check if IT checkbox is checked for 10x multiplier
         const isIT = document.getElementById('it-checkbox').checked;
         const multiplier = isIT ? 10 : 1;
         
@@ -1023,19 +1370,20 @@
           showError(t('errorApi'));
           console.error(error);
         }
+      } finally {
+        calcBtn.disabled = false;
       }
     }
 
     function share() {
       if (!window.currentBill) return;
 
-      const { profile, bill } = window.currentBill;
+      const { profile, bill, period } = window.currentBill;
       
-      // Create shareable URL with handle parameter
-      const shareableUrl = `${window.location.origin}${window.location.pathname}?handle=${encodeURIComponent(profile.handle)}`;
+      const shareableUrl = `${window.location.origin}${window.location.pathname}?handle=${encodeURIComponent(profile.handle)}&period=${encodeURIComponent(period)}&lang=${encodeURIComponent(currentLang)}`;
       
       const text = t('shareText')
-        .replace('{amount}', formatAmount(bill.total))
+        .replace('{amount}', bill.total.toFixed(2))
         + shareableUrl;
 
       const shareUrl = `https://bsky.app/intent/compose?text=${encodeURIComponent(text)}`;
@@ -1058,14 +1406,8 @@
       // Period selector
       document.querySelectorAll('.period-btn').forEach(btn => {
         btn.addEventListener('click', () => {
-          document.querySelectorAll('.period-btn').forEach(b => {
-            b.classList.remove('active');
-            b.setAttribute('aria-pressed', 'false');
-          });
-          btn.classList.add('active');
-          btn.setAttribute('aria-pressed', 'true');
+          setActivePeriod(btn.dataset.period);
           
-          // Recalculate if there's already a handle entered
           const handleInput = document.getElementById('handle-input').value;
           if (handleInput.trim()) {
             calculate();
@@ -1087,7 +1429,7 @@
       // Donate button
       document.getElementById('donate-btn').addEventListener('click', donate);
 
-      // IT checkbox - recalculate when toggled
+      // IT checkbox
       document.getElementById('it-checkbox').addEventListener('change', () => {
         const handleInput = document.getElementById('handle-input').value;
         if (handleInput.trim()) {
@@ -1095,18 +1437,24 @@
         }
       });
 
-      // Check for lang in URL parameter first
-      const urlParams = new URLSearchParams(window.location.search);
+      // ---- Initialize from URL params and user preferences ----
+      const urlParams = getUrlParams();
+
+      // 1. Language: URL param > browser preference
       const langParam = urlParams.get('lang');
-      if (langParam && (langParam === 'en' || langParam === 'uk')) {
+      if (langParam && i18n[langParam]) {
         setLanguage(langParam);
       } else {
-        // Auto-detect language from browser
-        const userLang = navigator.language.startsWith('uk') ? 'uk' : 'en';
-        setLanguage(userLang);
+        setLanguage(detectUserLanguage());
       }
 
-      // Check for handle in URL parameter
+      // 2. Period: URL param > default (week)
+      const periodParam = urlParams.get('period');
+      if (periodParam && CONFIG.VALID_PERIODS.includes(periodParam)) {
+        setActivePeriod(periodParam);
+      }
+
+      // 3. Handle: auto-calculate if provided
       const handleParam = urlParams.get('handle');
       if (handleParam) {
         document.getElementById('handle-input').value = handleParam;
